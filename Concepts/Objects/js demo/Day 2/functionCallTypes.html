@@ -1,0 +1,33 @@
+<script>
+
+	function msg(){
+		console.log("you just called me");
+	}
+
+	msg();	//Method 1
+
+//////////////////////////////////////
+	
+	var obj={};
+
+	obj.msg = function(){
+		console.log("you called me Again")
+	}
+
+	obj.msg();	//Method 2
+
+/////////////////////////////////////
+
+	new msg1();	//Method 3	
+
+////////////////////////////////////
+
+	msg.call();			//Method 4
+
+
+
+	function msg1(){
+		console.log("Will You Stop Calling Me Now ? \nIt's Annoying...")
+	}
+
+</script>
