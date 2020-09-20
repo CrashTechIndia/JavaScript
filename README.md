@@ -3,7 +3,7 @@ Playing with JS like never before in a collated repoistory, making it a one stop
 
 initial commit fom local: 
 
-create a local branch
+create a local branch:
 `git checkout -b dev/javascript`
 
 enable tracking for the newly created branch
