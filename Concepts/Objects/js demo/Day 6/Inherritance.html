@@ -1,0 +1,29 @@
+<script type="text/javascript">
+
+	function emp(name){
+		this.name = name;
+	};
+
+	emp.prototype.getname = function(){
+		return this.name;
+	}
+
+	var emp1 = new emp("afsar");
+
+//////////////////////////////
+
+	function mgr(name, dept){
+		this.name = name;
+		this.dept = dept;
+	}
+
+	mgr.prototype.getdept = function(){
+		return this.dept;
+	}
+
+	var mgr1 = new mgr("Vanita","IMS");
+
+	
+
+
+</script>

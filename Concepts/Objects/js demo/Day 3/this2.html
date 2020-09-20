@@ -1,0 +1,19 @@
+<script>
+	function createEmpObject(firstname, lastname, gender, designation,salary){
+	//var this = {};
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.gender = gender;
+		this.designation = designation;
+		this.salary = salary;
+		this.incresseSalary = function(salary){
+			this.salary+=salary;
+		}
+		
+	return this;
+}
+
+//var emp = new createEmpObject("Raju","Rastogi","Male","Engineer",25000);
+//console.log(emp);
+
+</script>

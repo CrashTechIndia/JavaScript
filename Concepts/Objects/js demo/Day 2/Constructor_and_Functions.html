@@ -1,0 +1,33 @@
+<script>
+
+	var emp1 = {
+		"firstname":"farhaan",
+		"lastname":"Qureshi",
+		"gender":"male",
+		"designation":"Wildlife Photographer"
+	};
+
+	var emp2 = createEmpObject("Chatur","Ramalingam","Male","CEO");
+
+	function createEmpObject(firstname, lastname, gender, designation){
+		var obj = {};
+		obj.firstname = firstname;
+		obj.lastname = lastname;
+		obj.gender = gender;
+		obj.designation = designation;
+		return obj;
+	}
+
+	
+	function empConstructor(firstname, lastname, gender, designation){
+		//	var this = {};
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.gender = gender;
+		this.designation = designation;
+		//	return this;
+	}
+
+	var emp = new empConstructor("Raju","Rastogi","Male","Engineer");
+
+</script>

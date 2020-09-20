@@ -1,0 +1,73 @@
+<script>
+
+	/*
+		just like functions in javascripts have a propperty called prototype which points to the prototype object,
+		every prototype object has a porperty called constructor which points to the function itself.
+		
+	*/
+
+	function emp() {
+		this.text = "Some Random Text, because the below lines will change me";
+	}
+
+	console.log(emp);	//will refer to the emp function
+
+	console.log(emp.prototype);	//will refer to the prototype function of emp
+
+	console.log(emp.prototype.constructor);	//will refer to the emp function itself
+
+	var x = new emp();	//creates a new Object of Emp Function
+
+	console.log(x.__proto__);	//will refer to the emp.prototype object
+
+	console.log(x.__proto__===emp.prototype);	//will return true since they both are pointing to the same object
+
+	console.log(x.__proto__.constructor); 	//will return the emp object itself. this is how we find which parent an object
+
+	/*	End Of Session 1	*/
+
+
+	/*	Day 5 Session 2	*/
+
+	x.text = "I Belong To The Child ";
+
+	x.__proto__.text = "I Come From The Father";	////emp.text
+
+	x.__proto__.__proto__.text = "I Am The GrandFather's Attribute #sabkaBaap🤘";	//Object.text
+
+	x.__proto__.__proto__.__proto__.text = "No Furthur Allowed. This Points To Null"	/*Function of Type Object's Object.__proto__ = null, hence adding 
+																						  attribute will generate error.*/
+
+	/*key takeaways*/
+	x.__proto__===emp.prototype;
+	x.__proto__.constructor===emp.prototype.constructor===emp;
+	x.__proto__.__proto__ === Object.prototype;
+	x.__proto__.__proto__.__proto__ ===Object.prototype.__proto__ === Null
+
+	//since Object itself is also an Function
+	Object.__proto__=== Function.prototype;
+	Object.__proto__.constructor===Function;
+
+	// Since Function Too Is An Object
+	Function.__proto__===Object.prototype;
+	Function.__proto__.constructor===Object.prototype.constructor===Function;
+	Funcion.__proto__.__proto__.__proto__===Null;
+
+	//The Tie Breaker
+	Function.__proto__===Object.__proto__; //	ƒ () { [native code] }
+	Function.__proto__.constructor===Object.__proto__.constructor;	//which is Object again
+	Function.__proto__.constructor.__proto__.constructor === Function;	
+
+	//final Verdict
+	Function.__proto__	//gives us the "ƒ () { [native code] }"
+	Function.__proto__.__proto__ /* 
+									Returns the Current Available Object Of Type Function If Any
+								    Else Returns The Function Constructor Description
+	
+	//Golden Learnings	
+							 */
+	/*	I managed to backtrack Object Leading me to Function but Backtrackikng Function Never Gave me Object again 	*/
+	Object.__proto__.constructor===Function; 
+	
+
+</script>
