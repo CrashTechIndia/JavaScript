@@ -1,0 +1,4 @@
+/*
+    linting is simply enforcing style guides into our code.
+    ESLint is a package that lets us lint.
+*/
